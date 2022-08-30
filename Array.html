@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const persons = [
+
+            { name: "MONCEF", age: 13 },
+            { name: "BAHIJA", age: 23 },
+            { name: "ALA", age: 18 },
+
+        ];
+
+        function majeurMineur(liste) {
+
+            let newListe = liste.map((p) => {
+                if (p.age > 18) {
+                    p.status = "majeur"
+                }
+                else
+                    p.status = "mineur"
+            })
+            return (newListe)
+        }
+        console.log(majeurMineur(persons));
+        //returned undefined ?
+
+
+
+        function FormatToString(str) {
+            const s = str.split("-");
+            let name = s.split("&");
+            console.log(s);
+
+            console.log(name)
+        }
+        const str1 = 'ahmed&ferah-moez&saadi-fadhel&gadihi';
+        FormatToString(str1);
+
+
+        function editList(list, index, value) {
+            for (let i = 0; i < list.length; i++) {
+                if (i == index) {
+                    list[i] = value;
+                }
+            }
+        }
+
+
+        function MoodDetect(liste) {
+            let liste2 = liste.map((e) => {
+                if (e.comment.includes('aime')) 
+                {  liste2.etat : 'heureux' }
+                else if (e.comment.includes('null')) 
+                { liste2.etat :'triste' }
+                else
+                 { liste2.etat: 'neutre' } }
+            )
+        
+        return (liste2) }
+
+        const users = [
+            { name: "sarah", comment: "j'aime ce poste <3" },
+            { name: "monya", comment: "le poste est null :( " },
+            { name: "carlos", comment: "salut l'algérie" }]
+console.log(MoodDetect(users))
+
+
+
+
+       
+    </script>
+</body>
+
+</html>

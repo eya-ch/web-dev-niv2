@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+">
+   
+    <h2>list app</h2>
+    <input type="text" name="input">
+    <button>ajouter<p></p>a la liste</button>
+    <ul>
+
+    </ul>
+    <script>
+let listeHTML = document.querySelector("ul");
+    let input = document.querySelector("input");
+    let addBtn=document.querySelector("button")
+    let ktiba = document.querySelector("p")
+    input.onkeydown = (e) => {
+      if (e.key == "Enter") {
+        addPerson();
+        ktiba.innerHTML=input.value;
+
+      }
+    };
+  
+    input.keyUp = (e) => {
+
+    }
+   addBtn.onclick =addPerson () ;
+   function addPerson() {
+    let li = document.createElement("li");
+    li.innerText = input.value;
+        listeHTML.appendChild(li);
+    }
+
+    </script>
+</body>
+</html>

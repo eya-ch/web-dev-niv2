@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body
+style="
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+">
+    <h2>Interface Corona</h2>
+    <input type="text">
+    <button>Ajouter</button>
+    Enregistrées
+    <ul id="liste1"></ul>
+    Vaccinées
+    <ul id="liste2"></ul>
+    <script>
+let liste1 = document.querySelector("#liste1");
+let liste2 = document.querySelector("#liste2");
+    let input = document.querySelector("input");
+    let addBtn=document.querySelector("button")
+    
+addBtn.onclick= ajout ;
+
+    function ajout() {
+        let li = document.createElement("li");
+        li.innerText = input.value;
+        liste1.appendChild(li)
+    }
+    </script>
+</body>
+</html>
